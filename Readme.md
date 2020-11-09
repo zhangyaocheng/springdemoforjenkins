@@ -1,0 +1,3 @@
+# SpringDemoforjenkins
+
+这是一个用于测试在jenkins种部署项目的测试工程

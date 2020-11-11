@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace= "com.zyc.springtest.demo.mapper.UserInfoMapper" >
+    
+    <select id="findAll" resultType="UserInfo">
+        select * from userinfo order by id desc ;
+    </select>
+
+    <select id="findByParameter" resultType="UserInfo" parameterType="Map">
+        select * from userinfo
+        <where>
+            <if test="name!=null and name!=''">
+                and name like "%"#{name}"%"
+            </if>
+            <if test="passwd!=null and passwd!=''">
+                and passwd like "%"#{passwd}"%"
+            </if>
+        </where>
+        order by id desc
+    </select>
+
+</mapper>

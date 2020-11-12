@@ -9,16 +9,31 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zyc.springtest</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>springdemoforjenkins</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
+   <!-- 打包方式是war   -->
+    <packaging>war</packaging>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
+
+        <!--部署成war包时开启↓↓↓↓-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>  <!--provided表明该包只在编译和测试的时候用-->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <scope>provided</scope>  <!--provided表明该包只在编译和测试的时候用-->
+        </dependency>
+        <!--部署成war包时开启↑↑↑↑-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

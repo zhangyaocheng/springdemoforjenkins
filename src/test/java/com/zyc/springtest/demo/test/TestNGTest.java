@@ -29,12 +29,12 @@ public class TestNGTest {
         Assert.assertTrue(true);
     }
 
-//    @Story("Story类似三级目录")
-//    @Test
-//    public void test3(){
-//        System.out.println("Flase");
-//        Assert.assertTrue(false);
-//    }
+    @Story("Story类似三级目录")
+    @Test
+    public void test3(){
+        System.out.println("Flase");
+        Assert.assertTrue(false);
+    }
 
     @AfterClass
     public void EndClass(){

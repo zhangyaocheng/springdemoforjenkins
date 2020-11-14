@@ -109,6 +109,8 @@
                             <value>./target/allure-results</value>
                         </property>
                     </systemProperties>
+
+                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
                 <dependencies>
                     <dependency>

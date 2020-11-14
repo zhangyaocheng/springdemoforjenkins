@@ -9,27 +9,27 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 @Epic("类似一级目录")
-@Feature("类似二级目录")
+@Feature("TestNG功能测试")
 public class TestNGTest {
 
     @BeforeClass
     public void BeforeClass(){
         System.out.println("BeforeClass");
     }
-    @Story("Story类似三级目录")
+    @Story("运行测试1")
     @Test
     public void test1(){
         System.out.println("This is the first testng testcase in this springdemo");
         Assert.assertTrue(true);
     }
-    @Story("Story类似三级目录")
+    @Story("运行测试2")
     @Test
     public void test2(){
         System.out.println("The Second, it's true");
         Assert.assertTrue(true);
     }
 
-    @Story("Story类似三级目录")
+    @Story("运行测试3")
     @Test
     public void test3(){
         System.out.println("Flase");
